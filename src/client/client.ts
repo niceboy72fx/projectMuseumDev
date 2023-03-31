@@ -713,9 +713,34 @@ window.addEventListener("keydown",  function (event) {
         case (19 || 18) && (18 || 17) :
              handleControlShowPopup(19, 18 , 18, 17 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   // nó chỉ render html mới
              break
-        case (19 || 18) && (21 || 20) :
-            handleControlShowPopup(19, 18, 21, 20 , "Sông Tigris ở Mosul, Iraq/4. Sông Tigris ở Mosul, Iraq" , "" )
+        case 19 && (21 || 20) :
+            handleControlShowPopup(19, 19, 21, 20 , "Sông Tigris ở Mosul, Iraq/4. Sông Tigris ở Mosul, Iraq" , "" )
             break
+        case 17 && (21 || 20) :
+            handleControlShowPopup(17, 17, 21, 20, "Các vị thần Geb và Nut" , "" )
+            break
+        case (16 || 15) && (10 || 9) :
+            handleControlShowPopup(16, 15, 10, 9, "Số học" , "" )
+            break
+        case 11 && 10 :
+            handleControlShowPopup(11, 11, 10, 10, "Chữ tượng hình của Ai Cập cổ đại", "" )
+            break
+        case 10 && 11 : 
+            handleControlShowPopup(10, 10, 11, 11, "Điều kiện tự nhiên", "" )
+            break
+        case 9 && (15 || 14) :
+            handleControlShowPopup(9, 9, 15, 14, "Việc đo đạc của người Ai Cập", "" )
+            break
+        case 10 && 17 : 
+            handleControlShowPopup(10, 10, 17, 17, "Thành tựu khoa học của người Ai Cập", "" )
+            break
+        case 13 && 17 :
+            handleControlShowPopup(13, 13, 17, 17, "Tượng Xpanh (Nhân sư)", "" )
+            break
+        // Room 1 (lỗi 3)
+        // Room 2
+        case 7 && 12 :
+            handleControlShowPopup(7, 7, 12, 12, "Lược đồ Ấn Độ cổ đại", "" )
         default:
         if (panel) {
             panel.remove()
