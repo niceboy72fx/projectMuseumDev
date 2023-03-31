@@ -802,7 +802,44 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(7, 7, -11, -11, "Cửu chương lập thành toán pháp", "") // Lỗi
             break
         // Room 3 (lỗi 3)
-        
+        // Room 4
+        case 9 && -7 :
+            handleControlShowPopup(9, 9, -7, -7, "Lược đồ Hy Lạp cổ đại", "") // Lỗi
+            break
+        case 12 && (-10 || -11) :
+            handleControlShowPopup(12, 12, -10, -11, "Bản đồ La Mã (từ thế kỷ V TCN đến thế kỷ 2)", "") // Lỗi
+            break
+        case 12 && -13 :
+            handleControlShowPopup(12, 12, -13, -13, "Sử thi Iliad", "")
+            break
+        case 12 && -15 :
+            handleControlShowPopup(12, 12, -15, -15, "Một cảnh trong tác phẩm Eudipe", "") // Lỗi
+            break
+        case 14 && -16 :
+            handleControlShowPopup(14, 14, -16, -16, "Cảnh quan Firenze, trung tâm bắt nguồn Phục Hưng", "") // Lỗi
+            break
+        case 15 && -15 :
+            handleControlShowPopup(15, 15, -15, -15, "Viện nguyên lão", "") // Lỗi 
+            break
+        case 18 && -11 :
+            handleControlShowPopup(18, 18, -11, -11, "Thành Roma", "") // Lỗi
+            break
+        case 21 && -12 :
+            handleControlShowPopup(21, 21, -12, -12, "Bức tượng hoàng đế Elagabalus", "") //Lỗi 
+            break
+        case 22 && -11 :
+            handleControlShowPopup(22, 22, -11, -11, "Đấu trường Roma", "") // Lỗi
+            break
+        case 22 && -6 :
+            handleControlShowPopup(22, 22, -6, -6, "Triết học Hy Lạp", "")
+            break
+        case 20 && -4 :
+            handleControlShowPopup(20, 20, -4, -4, "Thành phố Florence, Italy", "")
+            break
+        case 16 && -5 :
+            handleControlShowPopup(16, 16, -5, -5, "Hình ảnh một đấu sỹ đấu lợn rừng", "")
+            break
+        // Room 4 (lỗi 8)
         default:
         if (panel) {
             panel.remove()
