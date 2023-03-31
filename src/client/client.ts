@@ -773,6 +773,36 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(2, 1, 10, 10, "Tháp Mina - Công trình kiến trúc Hồi giáo nổi bật", "") // Lỗi
             break
         // Room 2 (lỗi 7)
+        // Room 3
+        case -6 && -7 :
+            handleControlShowPopup(-6, -6, -7, -7, "In ấn", "")
+            break
+        case -3 && -10 :
+            handleControlShowPopup(-3, -3, -10, -10, "La bàn", "")
+            break
+        case -3 && (-12 || -13) :
+            handleControlShowPopup(-3, -3, -12, -13, "Đồng hồ cơ khí", "")
+            break
+        case -3 && -15 :
+            handleControlShowPopup(-3, -3, -15, -15, "Kinh thi", "")
+            break
+        case -1 && -16 :
+            handleControlShowPopup(-1, -1, -16, -16, "Giấy", "")
+            break
+        case 0 && -15 :
+            handleControlShowPopup(0, 0, -15, -15, "Chữ viết trên thẻ tre", "") // Lỗi
+            break
+        case 3 && -11 :
+            handleControlShowPopup(3, 3, -11, -11, "Bảy nhà tư tưởng vĩ đại nhất Trung Quốc (Thời kỳ cổ đại)", "")
+            break
+        case 6 && -12 :
+            handleControlShowPopup(6, 6, -12, -12, "Vạn lý trường thành", "") // Lỗi
+            break
+        case 7 && -11 :
+            handleControlShowPopup(7, 7, -11, -11, "Cửu chương lập thành toán pháp", "") // Lỗi
+            break
+        // Room 3 (lỗi 3)
+        
         default:
         if (panel) {
             panel.remove()
