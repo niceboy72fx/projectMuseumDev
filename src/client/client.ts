@@ -717,13 +717,13 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(19, 19, 21, 20 , "Sông Tigris ở Mosul, Iraq/4. Sông Tigris ở Mosul, Iraq" , "" )
             break
         case 17 && (21 || 20) :
-            handleControlShowPopup(17, 17, 21, 20, "Các vị thần Geb và Nut" , "" )
+            handleControlShowPopup(17, 17, 21, 20, "Các vị thần Geb và Nut" , "" ) //Lỗi
             break
         case (16 || 15) && (10 || 9) :
             handleControlShowPopup(16, 15, 10, 9, "Số học" , "" )
             break
         case 11 && 10 :
-            handleControlShowPopup(11, 11, 10, 10, "Chữ tượng hình của Ai Cập cổ đại", "" )
+            handleControlShowPopup(11, 11, 10, 10, "Chữ tượng hình của Ai Cập cổ đại", "" ) //Lỗi
             break
         case 10 && 11 : 
             handleControlShowPopup(10, 10, 11, 11, "Điều kiện tự nhiên", "" )
@@ -735,12 +735,44 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(10, 10, 17, 17, "Thành tựu khoa học của người Ai Cập", "" )
             break
         case 13 && 17 :
-            handleControlShowPopup(13, 13, 17, 17, "Tượng Xpanh (Nhân sư)", "" )
+            handleControlShowPopup(13, 13, 17, 17, "Tượng Xpanh (Nhân sư)", "" ) //Lỗi
             break
         // Room 1 (lỗi 3)
         // Room 2
         case 7 && 12 :
-            handleControlShowPopup(7, 7, 12, 12, "Lược đồ Ấn Độ cổ đại", "" )
+            handleControlShowPopup(7, 7, 12, 12, "Lược đồ Ấn Độ cổ đại", "" ) //Lỗi
+            break
+        case 4 && (15 || 14) :
+            handleControlShowPopup(4, 4, 15, 14, "Chữ San-krít trên lá cọ", "" ) //Lỗi
+            break
+        case 4 && (18 || 17) :
+            handleControlShowPopup(4, 4, 18, 17, "Đạo Bà La Môn", "" ) //Lỗi
+            break
+        case 4 && 20 :
+            handleControlShowPopup(4, 4, 20, 20, "Văn học, nghệ thuật Ấn Độ cổ đại", "" )
+            break
+        case 2 && 21 :
+            handleControlShowPopup(2, 2, 21, 21, "Y dược học Ấn Độ cổ đại", "" ) //Lỗi
+            break
+        case 0 && 20 :
+            handleControlShowPopup(0, 0, 20, 20, "Triết học", "" )
+            break
+        case -2 && (17 || 16) :
+            handleControlShowPopup(-2, -2, 17, 16, "Pháo đài đỏ Lal Quila", "") // Lỗi
+            break
+        case (-5 || -6) && 16 :
+            handleControlShowPopup(-5, -6, 16, 16, "Thành phố Ha-ráp-pa", "")
+            break
+        case -6 && (13 || 12) :
+            handleControlShowPopup(-6, -6, 13, 12, "Lăng Ta-giơ Ma-tan", "")
+            break
+        case -3 && 10 :
+            handleControlShowPopup(-3, -3, 10, 10, "Toán học", "") // Lỗi 
+            break
+        case (2 || 1) && 10 :
+            handleControlShowPopup(2, 1, 10, 10, "Tháp Mina - Công trình kiến trúc Hồi giáo nổi bật", "") // Lỗi
+            break
+        // Room 2 (lỗi 7)
         default:
         if (panel) {
             panel.remove()
