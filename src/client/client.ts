@@ -713,6 +713,9 @@ window.addEventListener("keydown",  function (event) {
         case (19 || 18) && (18 || 17) :
              handleControlShowPopup(19, 18 , 18, 17 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   // nó chỉ render html mới
              break
+        case (19 || 18) && (21 || 20) :
+            handleControlShowPopup(19, 18, 21, 20 , "Sông Tigris ở Mosul, Iraq/4. Sông Tigris ở Mosul, Iraq" , "" )
+            break
         default:
         if (panel) {
             panel.remove()
