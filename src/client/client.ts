@@ -36,18 +36,8 @@ scene.background = backgroundImage
 
 
 const menuPanel = document.getElementById('menuPanel') as HTMLDivElement
-// var menuPanel2 = document.getElementById('PanelTag') as HTMLDivElement
 const startButton = document.getElementById('startButton') as HTMLInputElement
-// const comment = document.querySelector('.tag') as HTMLInputElement
 
-startButton.addEventListener(
-    'click',
-    function () {
-        menuPanel.style.display = 'none'
-        controls.lock()
-    },
-    false
-)
 const cameraPosition = camera.position;
 const controls = new PointerLockControls(camera, renderer.domElement)
 // const transformControls = new TransformControls(camera, renderer.domElement)
@@ -64,86 +54,7 @@ window.addEventListener("mouseup", function (event) {
         })
 
 const handleControlShowPopup = (leftX : number , rightX : number  ,  leftZ : number , rightZ : number , name : string , linkURL : string ) => {
-      console.log('running')
-    //   if (Number.isInteger(leftX) || Number.isInteger(rightX) ||  Number.isInteger(rightZ) || Number.isInteger(leftZ)){
-    //      if ( Math.round(cameraPosition.x)   <= leftX && Math.round(cameraPosition.x ) <= rightX && Math.round(cameraPosition.z )  <= leftZ && Math.round(cameraPosition.z ) /100 <= rightZ  && name
-    //       ) { 
-    //          const newPanel = document.createElement("div") 
-    //           newPanel.setAttribute("id","PanelTag")
-    //           newPanel.style.display = "block"
-    //           newPanel.innerHTML =`
-    //           <div class="tag">
-    //           <div id="banner" style="color: white">${name} 
-    //           </div>
-    //           <div id="control">
-    //           <a href="${linkURL}">Tìm hiểu thêm</a>
-    //           </div>
-    //           </div>
-    //           `
-    //          document.body.appendChild(newPanel)
-             
-    //          console.log("if")
-    // } else  {
-    //     const panel = document.getElementById('PanelTag')
-    //     console.log("else")
-    //     if (panel) {
-    //         panel.remove()
-    //     }
-    // }
-    //    } else {
-    //       if ( Math.round(cameraPosition.x * 100 ) / 100  <= leftX && Math.round(cameraPosition.x * 100) /100 <= rightX && Math.round(cameraPosition.z * 100) /100 <= leftZ && Math.round(cameraPosition.z * 100) /100 <= rightZ  && name
-    //       ) { 
-    //          const newPanel = document.createElement("div") 
-    //           newPanel.setAttribute("id","PanelTag")
-    //           newPanel.style.display = "block"
-    //           newPanel.innerHTML =`
-    //           <div class="tag">
-    //           <div id="banner" style="color: white">${name} 
-    //           </div>
-    //           <div id="control">
-    //           <a href="${linkURL}">Tìm hiểu thêm</a>
-    //           </div>
-    //           </div>
-    //           `
-    //          document.body.appendChild(newPanel)
-             
-    //          console.log("if")
-    // } else  {
-    //     const panel = document.getElementById('PanelTag')
-    //     console.log("else")
-    //     if (panel) {
-    //         panel.remove()
-    //     }
-    // }}
-
-
-    //  if ( Math.round(cameraPosition.x * 100 ) / 100  <= leftX && Math.round(cameraPosition.x * 100) /100 <= rightX && Math.round(cameraPosition.z * 100) /100 <= leftZ && Math.round(cameraPosition.z * 100) /100 <= rightZ  && name
-    //       ) { 
-    //          const newPanel = document.createElement("div") 
-    //           newPanel.setAttribute("id","PanelTag")
-    //           newPanel.style.display = "block"
-    //           newPanel.innerHTML =`
-    //           <div class="tag">
-    //           <div id="banner" style="color: white">${name} 
-    //           </div>
-    //           <div id="control">
-    //           <a href="${linkURL}">Tìm hiểu thêm</a>
-    //           </div>
-    //           </div>
-    //           `
-    //          document.body.appendChild(newPanel)
-             
-    //          console.log("if")
-    // } else  {
-    //     const panel = document.getElementById('PanelTag')
-    //     console.log("else")
-    //     if (panel) {
-    //         panel.remove()
-    //     }
-    // }
-
-
-         if ( Math.round(cameraPosition.x)   <= leftX && Math.round(cameraPosition.x ) <= rightX && Math.round(cameraPosition.z )  <= leftZ && Math.round(cameraPosition.z ) /100 <= rightZ  && name
+         if ( Math.round(cameraPosition.x)   == Math.round(leftX) && Math.round(cameraPosition.x ) == Math.round(rightX) && Math.round(cameraPosition.z )  == Math.round(leftZ) && Math.round(cameraPosition.z )  == Math.round(rightZ)  && name
           ) { 
              const newPanel = document.createElement("div") 
               newPanel.setAttribute("id","PanelTag")
@@ -750,148 +661,148 @@ scene.add(imageLobbyRight2)
 //============================================Control============================================
 window.addEventListener("keydown",  function (event) {    
      const panel = document.getElementById('PanelTag')
-     console.log(Math.round(cameraPosition.x * 100 ) / 100 +"," + Math.round(cameraPosition.y * 100) / 100 +"," +  Math.round(cameraPosition.z * 100) / 100);
+     console.log(Math.round(cameraPosition.x) +"," + Math.round(cameraPosition.y) +"," +  Math.round(cameraPosition.z ) );
     // room1 
-    switch (Math.round(cameraPosition.x) && Math.round(cameraPosition.z)) {
-        case (21 || 20)   && (12 || 11) : 
-             handleControlShowPopup(21.9, 21, 12, 12 , "Bản đồ sông Euphrates & sông Tigris" , "" )
+    switch (true) {
+        case ( Math.round(cameraPosition.x) == 21    && Math.round(cameraPosition.z) == 12 ) : 
+             handleControlShowPopup(21, 21, 12, 12 , "Bản đồ sông Euphrates & sông Tigris" , "" )
              console.log("hey1")
              break
-        case (19 || 18) && (15 || 14) :
-             handleControlShowPopup(19.95, 19, 15.10 , 14.49 , "Sông Nin" , "" ) 
+        case ( Math.round(cameraPosition.x) == 19    && Math.round(cameraPosition.z) == 15 )  :
+             handleControlShowPopup(19, 19, 15, 15, "Sông Nin" , "" ) 
                           console.log("hey2")
              break
-        case (19 || 18) && 18 :
-             handleControlShowPopup(19.61, 18.86 , 18, 18 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   
+        case ( Math.round(cameraPosition.x) == 19    && Math.round(cameraPosition.z) == 18 ) :
+             handleControlShowPopup(19, 19 , 18, 18 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   
                           console.log("hey3")
              break
-        case 19 && 21  :
-            handleControlShowPopup(19, 19, 21.9, 21 , "Sông Tigris ở Mosul, Iraq" , "" )
+        case ( Math.round(cameraPosition.x) == 19    && Math.round(cameraPosition.z) == 21 ) :
+            handleControlShowPopup(19, 19, 21, 21 , "Sông Tigris ở Mosul, Iraq" , "" )
                          console.log("hey4")
             break
-        case (18 || 17) && 20  :
-            handleControlShowPopup(18, 17, 20, 20, "Các vị thầns Geb và Nut" , "" )
+        case  ( Math.round(cameraPosition.x) == 17    && Math.round(cameraPosition.z) == 20 ) :
+            handleControlShowPopup(17, 17, 20, 20, "Các vị thầns Geb và Nut" , "" )
                          console.log("hey5")
             break
-        case (16 || 15) && (10 || 9) :
-            handleControlShowPopup(16, 15, 10, 9, "Số học" , "" )
+        case ( Math.round(cameraPosition.x) == 16    && Math.round(cameraPosition.z) == 10 ) :
+            handleControlShowPopup(16, 16, 10, 10, "Số học" , "" )
             break
-        case (13 || 11) && (11 || 8):
-            handleControlShowPopup(12, 11, 11, 8, "Chữ tượng hình của Ai Cập cổ đại", "" ) 
+        case  ( Math.round(cameraPosition.x) == 11    && Math.round(cameraPosition.z) == 9 ):
+            handleControlShowPopup(11, 11, 9,9, "Chữ tượng hình của Ai Cập cổ đại", "" ) 
             break
-        case 10 && 11 : 
-            handleControlShowPopup(10, 10, 11, 11, "Điều kiện tự nhiên", "" )
+        case ( Math.round(cameraPosition.x) == 9    && Math.round(cameraPosition.z) == 11 ) : 
+            handleControlShowPopup(9, 9, 11, 11, "Điều kiện tự nhiên", "" )
             break
-        case 9 && (15 || 14) :
-            handleControlShowPopup(9, 9, 15, 14, "Việc đo đạc của người Ai Cập", "" )
+        case ( Math.round(cameraPosition.x) == 9    && Math.round(cameraPosition.z) == 15 ) :
+            handleControlShowPopup(9, 9, 15, 15, "Việc đo đạc của người Ai Cập", "" ) // err
             break
-        case 10 && 17 : 
+        case ( Math.round(cameraPosition.x) == 10    && Math.round(cameraPosition.z) == 17 ) : 
             handleControlShowPopup(10, 10, 17, 17, "Thành tựu khoa học của người Ai Cập", "" )
             break
-        case (13 || 12) && ( 16) :
-            handleControlShowPopup(13, 12, 16, 16, "Tượng Xpanh (Nhân sư)", "" ) 
+        case ( Math.round(cameraPosition.x) == 12    && Math.round(cameraPosition.z) == 16 ) :
+            handleControlShowPopup(12, 12, 16, 16, "Tượng Xpanh (Nhân sư)", "" ) 
             break
         // Room 2
-        case 6 && (12 || 11) :
-            handleControlShowPopup(6.5, 6, 11.9, 11.3, "Lược đồ Ấn Độ cổ đại", "" ) //Lỗi
+        case ( Math.round(cameraPosition.x) == 7    && Math.round(cameraPosition.z) == 12 )  :
+            handleControlShowPopup(7, 7, 12, 12, "Lược đồ Ấn Độ cổ đại", "" ) 
             break
-        case 4 && (15 || 14) :
-            handleControlShowPopup(4, 4, 15, 14, "Chữ San-krít trên lá cọ", "" ) //Lỗi
+        case ( Math.round(cameraPosition.x) == 4    && Math.round(cameraPosition.z) == 14 ) :
+            handleControlShowPopup(4, 4, 14, 14, "Chữ San-krít trên lá cọ", "" ) 
             break
-        case 4 && (18 || 17) :
-            handleControlShowPopup(4, 4, 18, 17, "Đạo Bà La Môn", "" ) //Lỗi
+        case ( Math.round(cameraPosition.x) == 4    && Math.round(cameraPosition.z) == 18 ) :
+            handleControlShowPopup(4, 4, 18, 18, "Đạo Bà La Môn", "" ) 
             break
-        case 4 && 20 :
-            handleControlShowPopup(4, 4, 20, 20, "Văn học, nghệ thuật Ấn Độ cổ đại", "" )
+        case ( Math.round(cameraPosition.x) == 4    && Math.round(cameraPosition.z) == 21 ) :
+            handleControlShowPopup(4, 4, 21, 21, "Văn học, nghệ thuật Ấn Độ cổ đại", "" )
             break
-        case 2 && 21 :
-            handleControlShowPopup(2, 2, 21, 21, "Y dược học Ấn Độ cổ đại", "" ) //Lỗi
+        case ( Math.round(cameraPosition.x) == 2    && Math.round(cameraPosition.z) == 20 ) :
+            handleControlShowPopup(2, 2, 20, 20, "Y dược học Ấn Độ cổ đại", "" ) 
             break
-        case 0 && 20 :
-            handleControlShowPopup(0, 0, 20, 20, "Triết học", "" )
+        case ( Math.round(cameraPosition.x) == 1    && Math.round(cameraPosition.z) == 20 ) :
+            handleControlShowPopup(1, 1, 20, 20, "Triết học", "" )
             break
-        case -2 && (17 || 16) :
-            handleControlShowPopup(-2, -2, 17, 16, "Pháo đài đỏ Lal Quila", "") // Lỗi
+        case ( Math.round(cameraPosition.x) == -2    && Math.round(cameraPosition.z) == 16 ) :
+            handleControlShowPopup(-2, -2, 16, 16, "Pháo đài đỏ Lal Quila", "") // 
             break
-        case (-5 || -6) && 16 :
-            handleControlShowPopup(-5, -6, 16, 16, "Thành phố Ha-ráp-pa", "")
-            break
-        case -6 && (13 || 12) :
-            handleControlShowPopup(-6, -6, 13, 12, "Lăng Ta-giơ Ma-tan", "")
-            break
-        case -3 && 10 :
-            handleControlShowPopup(-3, -3, 10, 10, "Toán học", "") // Lỗi 
-            break
-        case (2 || 1) && 10 :
-            handleControlShowPopup(2, 1, 10, 10, "Tháp Mina - Công trình kiến trúc Hồi giáo nổi bật", "") // Lỗi
-            break
-        // Room 2 (lỗi 7)
-        // Room 3
-        case -6 && -7 :
-            handleControlShowPopup(-6, -6, -7, -7, "In ấn", "")
-            break
-        case -3 && -10 :
-            handleControlShowPopup(-3, -3, -10, -10, "La bàn", "")
-            break
-        case -3 && (-12 || -13) :
-            handleControlShowPopup(-3, -3, -12, -13, "Đồng hồ cơ khí", "")
-            break
-        case -3 && -15 :
-            handleControlShowPopup(-3, -3, -15, -15, "Kinh thi", "")
-            break
-        case -1 && -16 :
-            handleControlShowPopup(-1, -1, -16, -16, "Giấy", "")
-            break
-        case 0 && -15 :
-            handleControlShowPopup(0, 0, -15, -15, "Chữ viết trên thẻ tre", "") // Lỗi
-            break
-        case 3 && -11 :
-            handleControlShowPopup(3, 3, -11, -11, "Bảy nhà tư tưởng vĩ đại nhất Trung Quốc (Thời kỳ cổ đại)", "")
-            break
-        case 6 && -12 :
-            handleControlShowPopup(6, 6, -12, -12, "Vạn lý trường thành", "") // Lỗi
-            break
-        case 7 && -11 :
-            handleControlShowPopup(7, 7, -11, -11, "Cửu chương lập thành toán pháp", "") // Lỗi
-            break
-        // Room 3 (lỗi 3)
-        // Room 4
-        case 9 && -7 :
-            handleControlShowPopup(9, 9, -7, -7, "Lược đồ Hy Lạp cổ đại", "") // Lỗi
-            break
-        case 12 && (-10 || -11) :
-            handleControlShowPopup(12, 12, -10, -11, "Bản đồ La Mã (từ thế kỷ V TCN đến thế kỷ 2)", "") // Lỗi
-            break
-        case 12 && -13 :
-            handleControlShowPopup(12, 12, -13, -13, "Sử thi Iliad", "")
-            break
-        case 12 && -15 :
-            handleControlShowPopup(12, 12, -15, -15, "Một cảnh trong tác phẩm Eudipe", "") // Lỗi
-            break
-        case 14 && -16 :
-            handleControlShowPopup(14, 14, -16, -16, "Cảnh quan Firenze, trung tâm bắt nguồn Phục Hưng", "") // Lỗi
-            break
-        case 15 && -15 :
-            handleControlShowPopup(15, 15, -15, -15, "Viện nguyên lão", "") // Lỗi 
-            break
-        case 18 && -11 :
-            handleControlShowPopup(18, 18, -11, -11, "Thành Roma", "") // Lỗi
-            break
-        case 21 && -12 :
-            handleControlShowPopup(21, 21, -12, -12, "Bức tượng hoàng đế Elagabalus", "") //Lỗi 
-            break
-        case 22 && -11 :
-            handleControlShowPopup(22, 22, -11, -11, "Đấu trường Roma", "") // Lỗi
-            break
-        case 22 && -6 :
-            handleControlShowPopup(22, 22, -6, -6, "Triết học Hy Lạp", "")
-            break
-        case 20 && -4 :
-            handleControlShowPopup(20, 20, -4, -4, "Thành phố Florence, Italy", "")
-            break
-        case 16 && -5 :
-            handleControlShowPopup(16, 16, -5, -5, "Hình ảnh một đấu sỹ đấu lợn rừng", "")
-            break
+        // case (-5 || -6) && 16 :
+        //     handleControlShowPopup(-5, -6, 16, 16, "Thành phố Ha-ráp-pa", "")
+        //     break
+        // case -6 && (13 || 12) :
+        //     handleControlShowPopup(-6, -6, 13, 12, "Lăng Ta-giơ Ma-tan", "")
+        //     break
+        // case -3 && 10 :
+        //     handleControlShowPopup(-3, -3, 10, 10, "Toán học", "") // Lỗi 
+        //     break
+        // case (2 || 1) && 10 :
+        //     handleControlShowPopup(2, 1, 10, 10, "Tháp Mina - Công trình kiến trúc Hồi giáo nổi bật", "") // Lỗi
+        //     break
+        // // Room 2 (lỗi 7)
+        // // Room 3
+        // case -6 && -7 :
+        //     handleControlShowPopup(-6, -6, -7, -7, "In ấn", "")
+        //     break
+        // case -3 && -10 :
+        //     handleControlShowPopup(-3, -3, -10, -10, "La bàn", "")
+        //     break
+        // case -3 && (-12 || -13) :
+        //     handleControlShowPopup(-3, -3, -12, -13, "Đồng hồ cơ khí", "")
+        //     break
+        // case -3 && -15 :
+        //     handleControlShowPopup(-3, -3, -15, -15, "Kinh thi", "")
+        //     break
+        // case -1 && -16 :
+        //     handleControlShowPopup(-1, -1, -16, -16, "Giấy", "")
+        //     break
+        // case 0 && -15 :
+        //     handleControlShowPopup(0, 0, -15, -15, "Chữ viết trên thẻ tre", "") // Lỗi
+        //     break
+        // case 3 && -11 :
+        //     handleControlShowPopup(3, 3, -11, -11, "Bảy nhà tư tưởng vĩ đại nhất Trung Quốc (Thời kỳ cổ đại)", "")
+        //     break
+        // case 6 && -12 :
+        //     handleControlShowPopup(6, 6, -12, -12, "Vạn lý trường thành", "") // Lỗi
+        //     break
+        // case 7 && -11 :
+        //     handleControlShowPopup(7, 7, -11, -11, "Cửu chương lập thành toán pháp", "") // Lỗi
+        //     break
+        // // Room 3 (lỗi 3)
+        // // Room 4
+        // case 9 && -7 :
+        //     handleControlShowPopup(9, 9, -7, -7, "Lược đồ Hy Lạp cổ đại", "") // Lỗi
+        //     break
+        // case 12 && (-10 || -11) :
+        //     handleControlShowPopup(12, 12, -10, -11, "Bản đồ La Mã (từ thế kỷ V TCN đến thế kỷ 2)", "") // Lỗi
+        //     break
+        // case 12 && -13 :
+        //     handleControlShowPopup(12, 12, -13, -13, "Sử thi Iliad", "")
+        //     break
+        // case 12 && -15 :
+        //     handleControlShowPopup(12, 12, -15, -15, "Một cảnh trong tác phẩm Eudipe", "") // Lỗi
+        //     break
+        // case 14 && -16 :
+        //     handleControlShowPopup(14, 14, -16, -16, "Cảnh quan Firenze, trung tâm bắt nguồn Phục Hưng", "") // Lỗi
+        //     break
+        // case 15 && -15 :
+        //     handleControlShowPopup(15, 15, -15, -15, "Viện nguyên lão", "") // Lỗi 
+        //     break
+        // case 18 && -11 :
+        //     handleControlShowPopup(18, 18, -11, -11, "Thành Roma", "") // Lỗi
+        //     break
+        // case 21 && -12 :
+        //     handleControlShowPopup(21, 21, -12, -12, "Bức tượng hoàng đế Elagabalus", "") //Lỗi 
+        //     break
+        // case 22 && -11 :
+        //     handleControlShowPopup(22, 22, -11, -11, "Đấu trường Roma", "") // Lỗi
+        //     break
+        // case 22 && -6 :
+        //     handleControlShowPopup(22, 22, -6, -6, "Triết học Hy Lạp", "")
+        //     break
+        // case 20 && -4 :
+        //     handleControlShowPopup(20, 20, -4, -4, "Thành phố Florence, Italy", "")
+        //     break
+        // case 16 && -5 :
+        //     handleControlShowPopup(16, 16, -5, -5, "Hình ảnh một đấu sỹ đấu lợn rừng", "")
+        //     break
         // Room 4 (lỗi 8)
         default:
         if (panel) {
@@ -903,12 +814,15 @@ window.addEventListener("keydown",  function (event) {
 })
 
 //===============================================Room1============================================
-const nameFrameLoaderRoom1 = new OBJLoader().load(frameNormalPath,(obj) => {
-    obj.scale.setScalar(0.001)
-    obj.position.set(20,1.8,8.3)
-    obj.rotateY(Math.PI)
-    scene.add(obj)
-}); 
+
+
+const nameFrameLoaderRoom1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/nameRoom/51.png'),
+}))
+nameFrameLoaderRoom1.scale.set(1,1,50)
+nameFrameLoaderRoom1.position.set(19.5,1.8,8.3)
+nameFrameLoaderRoom1.rotateY(Math.PI)
+scene.add(nameFrameLoaderRoom1)
 
 //--------------image1 --------------------
 const image1Room1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
@@ -927,13 +841,6 @@ banner1Room1.rotateY(Math.PI)
 banner1Room1.position.set(21.5,1.2,13)
 scene.add(banner1Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "Bản đồ sông Euphrates & sông Tigris" , "" )
-//      return false      
-// })
-
-
-//-------------
 //----------------------------------
 
 
@@ -957,11 +864,6 @@ banner2Room1.rotateY(Math.PI / 2)
 banner2Room1.position.set(20.15,1.2,14.6)
 scene.add(banner2Room1)
 
-/// dòng này
-// window.addEventListener("keydown", function (event) {
-// })
-//-------------
-//----------------------------------
 
 
 //--------------image3 --------------------
@@ -983,14 +885,7 @@ banner3Room1.rotateY(Math.PI / 2)
 banner3Room1.position.set(20.15,1.2,17.6)
 scene.add(banner3Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(19.45727781654154, 18.957491015020786 , 18.38776438417626  , 17.036732538988986  , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )      
-// })
 
-// window.addEventListener("keyup", function (event) {
-//       handleControlShowPopup(19.45727781654154, 18.957491015020786 , 18.38776438417626 , 17.036732538988986  , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )          
-// })
-//----------------------------------
 
 //--------------image4 --------------------
 
@@ -1012,14 +907,7 @@ banner4Room1.rotateY(Math.PI / 2)
 banner4Room1.position.set(20.15,1.2,20.6)
 scene.add(banner4Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
 
-// window.addEventListener("keyup", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
-//----------------------------------
 
 
 //--------------image5 --------------------
@@ -1039,14 +927,7 @@ banner5Room1.scale.set(0.6,0.15,50)
 banner5Room1.position.set(17.3,1,21.8)
 scene.add(banner5Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
 
-// window.addEventListener("keyup", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
-//----------------------------------
 
 //--------------image6 --------------------
 const image6Room1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
@@ -1063,14 +944,6 @@ banner6Room1.scale.set(0.6,0.15,50)
 banner6Room1.position.set(16.3,1.2,8.5)
 scene.add(banner6Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
-
-// window.addEventListener("keyup", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
-//----------------------------------
 
 //--------------image7 --------------------
 const image7Room1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
@@ -1087,13 +960,7 @@ banner7Room1.scale.set(0.6,0.15,50)
 banner7Room1.position.set(11.3,1.2,8.5)
 scene.add(banner7Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
 
-// window.addEventListener("keyup", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
 
 
 //----------------------------------
@@ -1117,14 +984,7 @@ banner8Room1.rotateY(Math.PI *2)
 banner8Room1.position.set(9.8,1.2,17.8)
 scene.add(banner8Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
 
-// window.addEventListener("keyup", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
-//----------------------------------
 
 //--------------image9 --------------------
 const image9Room1 =  new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
@@ -1145,14 +1005,7 @@ banner9Room1.rotateY(Math.PI *2)
 banner9Room1.position.set(12.6,1.2,17.8)
 scene.add(banner9Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
 
-// window.addEventListener("keyup", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
-//----------------------------------
 
 // const image10Room1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
 //     map: new TextureLoader().load('object/picture/room1/10.Hình ảnh một đấu sỹ đấu lợn rừng.jpg'),
@@ -1179,13 +1032,7 @@ banner11Room1.rotateY(Math.PI / 2)
 banner11Room1.position.set(8.3,1.2,15.2)
 scene.add(banner11Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
 
-// window.addEventListener("keyup", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
 //--------------image12 --------------------
 
 const image12Room1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
@@ -1204,22 +1051,15 @@ banner12Room1.rotateY(Math.PI / 2)
 banner12Room1.position.set(8.3,1.2,10.6)
 scene.add(banner12Room1)
 
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
-
-// window.addEventListener("keyup", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "" , "" )      
-// })
 
 //===============================================Room2============================================
-const nameFrameLoaderRoom2 = new OBJLoader().load(frameNormalPath,(obj) => {
-    obj.scale.setScalar(0.001)
-    obj.position.set(5,1.8,8.3)
-    obj.rotateY(Math.PI)
-    scene.add(obj)
-}); 
-
+const nameFrameLoaderRoom2 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/nameRoom/52.png'),
+}))
+nameFrameLoaderRoom2.scale.set(1,1,50)
+nameFrameLoaderRoom2.position.set(4.5,1.8,8.3)
+nameFrameLoaderRoom2.rotateY(Math.PI)
+scene.add(nameFrameLoaderRoom2)
 
 //--------------image1 --------------------
 
@@ -1348,26 +1188,6 @@ banner7Room2.position.set(-3.2,1.2,8.5)
 scene.add(banner7Room2)
 
 
-//--------------image8--------------------
-
-// // const image8Room2 =  new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-// //     map: new TextureLoader().load('object/picture/room1/8.Thành tựu khoa học của người Ai Cập cổ đại.jpg'),
-// //     side :  backside
-// // }))
-// // image8Room2.scale.set(2.4,1.8,50)
-// // image8Room2.rotateY(Math.PI * 2)
-// // image8Room2.position.set(9.8,2.6,17.8)
-// // scene.add(image8Room2)
-
-
-// const banner8Room2 =  new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-//     map: new TextureLoader().load('object/picture/room1/8.Thành tựu khoa học của người Ai Cập cổ đại.jpg'),
-//     side :  backside
-// }))
-// banner8Room2.scale.set(2.4,1.8,50)
-// banner8Room2.rotateY(Math.PI * 2)
-// banner8Room2.position.set(9.8,1.2,17.8)
-// scene.add(banner8Room2)
 
 //--------------image9--------------------
 
@@ -1446,12 +1266,14 @@ banner12Room2.position.set(-5.5,1.2,17.8)
 scene.add(banner12Room2)
 
 //===============================================Room3============================================
-const nameFrameLoaderRoom3 = new OBJLoader().load(frameNormalPath,(obj) => {
-    obj.scale.setScalar(0.001)
-    obj.position.set(-4,1.8,-3.1)
 
-    scene.add(obj)
-}); 
+
+const nameFrameLoaderRoom3 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/nameRoom/53.png'),
+}))
+nameFrameLoaderRoom3.scale.set(1,1,50)
+nameFrameLoaderRoom3.position.set(-3.5,1.8,-3.1)
+scene.add(nameFrameLoaderRoom3)
 
 //--------------image1--------------------
 
@@ -1614,67 +1436,71 @@ scene.add(banner9Room3)
 
 // //--------------image10--------------------
 
-// const image10Room3 =  new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-//     map: new TextureLoader().load('object/picture/room3/1.In ấn.jpg'),
-//     side: backside
-// }))
-// image10Room3.scale.set(2.4,1.8,50)
-// image10Room3.rotateY(Math.PI / 2)
-// image10Room3.position.set(7.6,2.2,-5.8)
-// scene.add(image10Room3)
+const image10Room3 =  new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/picture/room3/10.Hàn Phi Tử/10.Hàn Phi Tử.jpg'),
+    side: backside
+}))
+image10Room3.scale.set(2.4,1.8,50)
+image10Room3.rotateY(Math.PI / 2)
+image10Room3.position.set(7.6,2.2,-5.8)
+scene.add(image10Room3)
 
-// const banner10Room3 =  new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-//     map: new TextureLoader().load('object/picture/room3/1.In ấn.jpg'),
-//     side: backside
-// }))
-// banner10Room3.scale.set(0.6,0.15,50)
-// banner10Room3.rotateY(Math.PI / 2)
-// banner10Room3.position.set(7.6,0.8,-5.8)
-// scene.add(banner10Room3)
+const banner10Room3 =  new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/picture/room3/10.Hàn Phi Tử/61.png'),
+    side: backside
+}))
+banner10Room3.scale.set(0.6,0.15,50)
+banner10Room3.rotateY(Math.PI / 2)
+banner10Room3.position.set(7.6,0.8,-5.8)
+scene.add(banner10Room3)
 
 // //--------------image11--------------------
 
-// const image11Room3 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-//     map: new TextureLoader().load('object/picture/room3/1.In ấn.jpg'),
-//     side: backside
-// }))
-// image11Room3.scale.set(3.4,1.8,50)
-// image11Room3.position.set(0.2,2.2,-3.6)
-// scene.add(image11Room3)
+const image11Room3 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/picture/room3/11.Khổng Tử/11.Khổng Tử.jpg'),
+    side: backside
+}))
+image11Room3.scale.set(3.4,1.8,50)
+image11Room3.position.set(0.2,2.2,-3.6)
+scene.add(image11Room3)
 
-// const banner11Room3 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-//     map: new TextureLoader().load('object/picture/room3/1.In ấn.jpg'),
-//     side: backside
-// }))
-// banner11Room3.scale.set(0.6,0.15,50)
-// banner11Room3.position.set(0.2,0.8,-3.6)
-// scene.add(banner11Room3)
+const banner11Room3 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/picture/room3/11.Khổng Tử/59.png'),
+    side: backside
+}))
+banner11Room3.scale.set(0.6,0.15,50)
+banner11Room3.position.set(0.2,0.8,-3.6)
+scene.add(banner11Room3)
 
 // //--------------image12--------------------
 
-// const image12Room3 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-//     map: new TextureLoader().load('object/picture/room3/1.In ấn.jpg'),
-//           side: backside
-// }))
-// image12Room3.scale.set(3.4,1.8,50)
-// image12Room3.position.set(4.6,2.2,-3.5)
-// scene.add(image12Room3)
+const image12Room3 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/picture/room3/12.Lão Tử/12.Lão Tử.jpg'),
+          side: backside
+}))
+image12Room3.scale.set(3.4,1.8,50)
+image12Room3.position.set(4.6,2.2,-3.5)
+scene.add(image12Room3)
 
-// const banner12Room3 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-//     map: new TextureLoader().load('object/picture/room3/1.In ấn.jpg'),
-//           side: backside
-// }))
-// banner12Room3.scale.set(0.6,0.15,50)
-// banner12Room3.position.set(4.6,0.8,-3.5)
-// scene.add(banner12Room3)
+const banner12Room3 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/picture/room3/12.Lão Tử/62.png'),
+          side: backside
+}))
+banner12Room3.scale.set(0.6,0.15,50)
+banner12Room3.position.set(4.6,0.8,-3.5)
+scene.add(banner12Room3)
 
 
 //===============================================Room4============================================
-const nameFrameLoaderRoom4 = new OBJLoader().load(frameNormalPath,(obj) => {
-    obj.scale.setScalar(0.001)
-    obj.position.set(21,1.8,-3.1)
-    scene.add(obj)
-}); 
+
+
+const nameFrameLoaderRoom4 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/nameRoom/54.png'),
+}))
+nameFrameLoaderRoom4.scale.set(1,1,50)
+nameFrameLoaderRoom4.position.set(11.5,1.8,-3.1)
+scene.add(nameFrameLoaderRoom4)
+
 
 //--------------image1--------------------
 
