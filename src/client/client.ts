@@ -64,23 +64,9 @@ window.addEventListener("mouseup", function (event) {
         })
 
 const handleControlShowPopup = (leftX : number , rightX : number  ,  leftZ : number , rightZ : number , name : string , linkURL : string ) => {
-    
       console.log('running')
-        //   const newPanel = document.createElement("div") 
-        //       newPanel.setAttribute("id","PanelTag")
-        //       newPanel.style.display = "block"
-        //       newPanel.innerHTML =`
-        //       <div class="tag">
-        //       <div id="banner" style="color: white">${name} 
-        //       </div>
-        //       <div id="control">
-        //       <a href="${linkURL}">Tìm hiểu thêm</a>
-        //       </div>
-        //       </div>
-        //       `
-        //      document.body.appendChild(newPanel);
-        //      console.log("if")
-      if ( Math.round(cameraPosition.x * 100 ) / 100  <= leftX && Math.round(cameraPosition.x * 100) /100 >= rightX && Math.round(cameraPosition.z * 100) /100 <= leftZ && Math.round(cameraPosition.z * 100) /100 >= rightZ  && name
+      if (Number.isInteger(leftX) && Number.isInteger(rightX) &&  Number.isInteger(rightZ) && Number.isInteger(leftZ)){
+         if ( Math.round(cameraPosition.x)   <= leftX && Math.round(cameraPosition.x ) <= rightX && Math.round(cameraPosition.z )  <= leftZ && Math.round(cameraPosition.z ) /100 <= rightZ  && name
           ) { 
              const newPanel = document.createElement("div") 
               newPanel.setAttribute("id","PanelTag")
@@ -94,7 +80,8 @@ const handleControlShowPopup = (leftX : number , rightX : number  ,  leftZ : num
               </div>
               </div>
               `
-             document.body.appendChild(newPanel);
+             document.body.appendChild(newPanel)
+             
              console.log("if")
     } else  {
         const panel = document.getElementById('PanelTag')
@@ -103,6 +90,31 @@ const handleControlShowPopup = (leftX : number , rightX : number  ,  leftZ : num
             panel.remove()
         }
     }
+       } else {
+          if ( Math.round(cameraPosition.x * 100 ) / 100  <= leftX && Math.round(cameraPosition.x * 100) /100 <= rightX && Math.round(cameraPosition.z * 100) /100 <= leftZ && Math.round(cameraPosition.z * 100) /100 <= rightZ  && name
+          ) { 
+             const newPanel = document.createElement("div") 
+              newPanel.setAttribute("id","PanelTag")
+              newPanel.style.display = "block"
+              newPanel.innerHTML =`
+              <div class="tag">
+              <div id="banner" style="color: white">${name} 
+              </div>
+              <div id="control">
+              <a href="${linkURL}">Tìm hiểu thêm</a>
+              </div>
+              </div>
+              `
+             document.body.appendChild(newPanel)
+             
+             console.log("if")
+    } else  {
+        const panel = document.getElementById('PanelTag')
+        console.log("else")
+        if (panel) {
+            panel.remove()
+        }
+    }}
 }
 
 
@@ -689,14 +701,14 @@ window.addEventListener("keydown",  function (event) {
      console.log(Math.round(cameraPosition.x * 100 ) / 100 +"," + Math.round(cameraPosition.y * 100) / 100 +"," +  Math.round(cameraPosition.z * 100) / 100);
     // room1 
     switch (Math.round(cameraPosition.x) && Math.round(cameraPosition.z)) {
-        case (21 || 20)  && (12 || 11 || 10) : 
-             handleControlShowPopup(21, 20, 12, 10 , "Bản đồ sông Euphrates & sông Tigris" , "" )
+        case 21   && (12 || 11) : 
+             handleControlShowPopup(21, 21, 12, 11 , "Bản đồ sông Euphrates & sông Tigris" , "" )
              break
-        case (19 || 18) && 14 :
-             handleControlShowPopup(19, 18, 14 , 14 , "Sông Nin" , "" ) 
+        case (19 || 18) &&(15 || 14) :
+             handleControlShowPopup(19, 18, 15 , 14 , "Sông Nin" , "" ) 
              break
-        case (19 || 18) && (18 || 17) :
-             handleControlShowPopup(19, 18 , 18, 17 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   
+        case 18 && 18 :
+             handleControlShowPopup(18, 18 , 18, 18 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   
              break
         case 19 && (21 || 20) :
             handleControlShowPopup(19, 19, 21, 20 , "Sông Tigris ở Mosul, Iraq" , "" )
@@ -723,8 +735,8 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(13, 12, 16, 16, "Tượng Xpanh (Nhân sư)", "" ) 
             break
         // Room 2
-        case (7 || 6) && (12 || 11) :
-            handleControlShowPopup(7, 6, 12, 11, "Lược đồ Ấn Độ cổ đại", "" ) //Lỗi
+        case 6 && (12 || 11) :
+            handleControlShowPopup(6.5, 6, 11.9, 11.3, "Lược đồ Ấn Độ cổ đại", "" ) //Lỗi
             break
         case 4 && (15 || 14) :
             handleControlShowPopup(4, 4, 15, 14, "Chữ San-krít trên lá cọ", "" ) //Lỗi
