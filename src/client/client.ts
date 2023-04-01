@@ -66,6 +66,20 @@ window.addEventListener("mouseup", function (event) {
 const handleControlShowPopup = (leftX : number , rightX : number  ,  leftZ : number , rightZ : number , name : string , linkURL : string ) => {
     
       console.log('running')
+        //   const newPanel = document.createElement("div") 
+        //       newPanel.setAttribute("id","PanelTag")
+        //       newPanel.style.display = "block"
+        //       newPanel.innerHTML =`
+        //       <div class="tag">
+        //       <div id="banner" style="color: white">${name} 
+        //       </div>
+        //       <div id="control">
+        //       <a href="${linkURL}">Tìm hiểu thêm</a>
+        //       </div>
+        //       </div>
+        //       `
+        //      document.body.appendChild(newPanel);
+        //      console.log("if")
       if ( Math.round(cameraPosition.x) <= leftX && Math.round(cameraPosition.x) >= rightX && Math.round(cameraPosition.z) <= leftZ && Math.round(cameraPosition.z) >= rightZ  && name
           ) { 
              const newPanel = document.createElement("div") 
@@ -668,62 +682,33 @@ imageLobbyRight2.position.set(45.5,3,12.7)
 scene.add(imageLobbyRight2)
 
 //===============================================Lobby2============================================
-//===============================================Room1============================================
-const nameFrameLoaderRoom1 = new OBJLoader().load(frameNormalPath,(obj) => {
-    obj.scale.setScalar(0.001)
-    obj.position.set(20,1.8,8.3)
-    obj.rotateY(Math.PI)
-    scene.add(obj)
-}); 
 
-//--------------image1 --------------------
-const image1Room1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-    map: new TextureLoader().load('object/picture/room1/1.Bản đồ_sông Euphrates & sông Tigris/1.Bản đồ_sông Euphrates & sông Tigris.jpg'),
-}))
-image1Room1.scale.set(1.6,1.6,50)
-image1Room1.rotateY(Math.PI)
-image1Room1.position.set(21.5,2.2,13)
-scene.add(image1Room1)
-
-const banner1Room1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
-    map: new TextureLoader().load('object/picture/room1/1.Bản đồ_sông Euphrates & sông Tigris/Ảnh màn hình 2023-02-09 lúc 23.34.52.png'),
-}))
-banner1Room1.scale.set(0.6,0.15,50)
-banner1Room1.rotateY(Math.PI)
-banner1Room1.position.set(21.5,1.2,13)
-scene.add(banner1Room1)
-
-// window.addEventListener("keydown", function (event) {
-//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "Bản đồ sông Euphrates & sông Tigris" , "" )
-//      return false      
-// })
-
-/// dòng này
+//============================================Control============================================
 window.addEventListener("keydown",  function (event) {    
      const panel = document.getElementById('PanelTag')
-     console.log(Math.round(cameraPosition.x) +"," + Math.round(cameraPosition.y) +"," +  Math.round(cameraPosition.z));
+     console.log(Math.round(cameraPosition.x * 100 ) / 100 +"," + Math.round(cameraPosition.y * 100) / 100 +"," +  Math.round(cameraPosition.z * 100) / 100);
     // room1 
     switch (Math.round(cameraPosition.x) && Math.round(cameraPosition.z)) {
         case (21 || 20)  && (12 || 11 || 10) : 
              handleControlShowPopup(21, 20, 12, 10 , "Bản đồ sông Euphrates & sông Tigris" , "" )
              break
         case (19 || 18) && 14 :
-             handleControlShowPopup(19, 18, 14 , 14 , "Sông Nin" , "" ) // html ko chạy
+             handleControlShowPopup(19, 18, 14 , 14 , "Sông Nin" , "" ) 
              break
         case (19 || 18) && (18 || 17) :
-             handleControlShowPopup(19, 18 , 18, 17 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   // nó chỉ render html mới
+             handleControlShowPopup(19, 18 , 18, 17 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   
              break
         case 19 && (21 || 20) :
-            handleControlShowPopup(19, 19, 21, 20 , "Sông Tigris ở Mosul, Iraq/4. Sông Tigris ở Mosul, Iraq" , "" )
+            handleControlShowPopup(19, 19, 21, 20 , "Sông Tigris ở Mosul, Iraq" , "" )
             break
-        case 17 && (21 || 20) :
-            handleControlShowPopup(17, 17, 21, 20, "Các vị thần Geb và Nut" , "" ) //Lỗi
+        case (17 || 16) && (20 || 19) :
+            handleControlShowPopup(17, 16, 20, 19, "Các vị thầns Geb và Nut" , "" )
             break
         case (16 || 15) && (10 || 9) :
             handleControlShowPopup(16, 15, 10, 9, "Số học" , "" )
             break
-        case 11 && 10 :
-            handleControlShowPopup(11, 11, 10, 10, "Chữ tượng hình của Ai Cập cổ đại", "" ) //Lỗi
+        case (13 || 11) && (11 || 8):
+            handleControlShowPopup(12, 11, 11, 8, "Chữ tượng hình của Ai Cập cổ đại", "" ) 
             break
         case 10 && 11 : 
             handleControlShowPopup(10, 10, 11, 11, "Điều kiện tự nhiên", "" )
@@ -734,13 +719,12 @@ window.addEventListener("keydown",  function (event) {
         case 10 && 17 : 
             handleControlShowPopup(10, 10, 17, 17, "Thành tựu khoa học của người Ai Cập", "" )
             break
-        case 13 && 17 :
-            handleControlShowPopup(13, 13, 17, 17, "Tượng Xpanh (Nhân sư)", "" ) //Lỗi
+        case (13 || 12) && ( 16) :
+            handleControlShowPopup(13, 12, 16, 16, "Tượng Xpanh (Nhân sư)", "" ) 
             break
-        // Room 1 (lỗi 3)
         // Room 2
-        case 7 && 12 :
-            handleControlShowPopup(7, 7, 12, 12, "Lược đồ Ấn Độ cổ đại", "" ) //Lỗi
+        case (7 || 6) && (12 || 11) :
+            handleControlShowPopup(7, 6, 12, 11, "Lược đồ Ấn Độ cổ đại", "" ) //Lỗi
             break
         case 4 && (15 || 14) :
             handleControlShowPopup(4, 4, 15, 14, "Chữ San-krít trên lá cọ", "" ) //Lỗi
@@ -846,11 +830,40 @@ window.addEventListener("keydown",  function (event) {
         }
         break
     }      
-    
-    
-     
  
 })
+
+//===============================================Room1============================================
+const nameFrameLoaderRoom1 = new OBJLoader().load(frameNormalPath,(obj) => {
+    obj.scale.setScalar(0.001)
+    obj.position.set(20,1.8,8.3)
+    obj.rotateY(Math.PI)
+    scene.add(obj)
+}); 
+
+//--------------image1 --------------------
+const image1Room1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/picture/room1/1.Bản đồ_sông Euphrates & sông Tigris/1.Bản đồ_sông Euphrates & sông Tigris.jpg'),
+}))
+image1Room1.scale.set(1.6,1.6,50)
+image1Room1.rotateY(Math.PI)
+image1Room1.position.set(21.5,2.2,13)
+scene.add(image1Room1)
+
+const banner1Room1 = new Mesh(new PlaneGeometry(),new MeshBasicMaterial({
+    map: new TextureLoader().load('object/picture/room1/1.Bản đồ_sông Euphrates & sông Tigris/Ảnh màn hình 2023-02-09 lúc 23.34.52.png'),
+}))
+banner1Room1.scale.set(0.6,0.15,50)
+banner1Room1.rotateY(Math.PI)
+banner1Room1.position.set(21.5,1.2,13)
+scene.add(banner1Room1)
+
+// window.addEventListener("keydown", function (event) {
+//      handleControlShowPopup(21.918679794853347, 20.418975732027548 , 12.1606322047686 , 10.660637060936335 , "Bản đồ sông Euphrates & sông Tigris" , "" )
+//      return false      
+// })
+
+
 //-------------
 //----------------------------------
 
