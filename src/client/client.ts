@@ -80,7 +80,7 @@ const handleControlShowPopup = (leftX : number , rightX : number  ,  leftZ : num
         //       `
         //      document.body.appendChild(newPanel);
         //      console.log("if")
-      if ( Math.round(cameraPosition.x) <= leftX && Math.round(cameraPosition.x) >= rightX && Math.round(cameraPosition.z) <= leftZ && Math.round(cameraPosition.z) >= rightZ  && name
+      if ( Math.round(cameraPosition.x * 100 ) / 100  <= leftX && Math.round(cameraPosition.x * 100) /100 >= rightX && Math.round(cameraPosition.z * 100) /100 <= leftZ && Math.round(cameraPosition.z * 100) /100 >= rightZ  && name
           ) { 
              const newPanel = document.createElement("div") 
               newPanel.setAttribute("id","PanelTag")
