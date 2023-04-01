@@ -20,7 +20,7 @@ const camera = new THREE.PerspectiveCamera(
     0.1,
     1000
 )
-camera.position.set(4,2,2.35)
+camera.position.set(-5,2,2)
 camera.rotateY(-1.5)
 
 const material2 = new MeshBasicMaterial()
@@ -1771,35 +1771,35 @@ const StatueLoader3 = new GLTFLoader().load("object/statue/ancient_greek_coin/sc
 
 //-------------------------------Statue-3
 
-const PedestalLoader6 = new OBJLoader().load(PedestalPath, (obj) => {
-        obj.position.set(tempPositionX + 3,1.3,0)
-             obj.scale.setScalar(0.06)
-        obj.rotateX(Math.PI / 2 )
-    scene.add(obj)
-});
+// const PedestalLoader6 = new OBJLoader().load(PedestalPath, (obj) => {
+//         obj.position.set(tempPositionX + 3,1.3,0)
+//              obj.scale.setScalar(0.06)
+//         obj.rotateX(Math.PI / 2 )
+//     scene.add(obj)
+// });
 
-const StatueLoader6 = new GLTFLoader().load("object/statue/aphrodite_of_milos_a_plaster_cast/scene.gltf", (obj) => {
-    obj.scene.position.set(tempPositionX + 2.8,2.1,-0.6)
-    obj.scene.scale.setScalar(0.001)
-    scene.add(obj.scene)
-});
+// const StatueLoader6 = new GLTFLoader().load("object/statue/aphrodite_of_milos_a_plaster_cast/scene.gltf", (obj) => {
+//     obj.scene.position.set(tempPositionX + 2.8,2.1,-0.6)
+//     obj.scene.scale.setScalar(0.001)
+//     scene.add(obj.scene)
+// });
 
 
 //-------------------------------Statue-4
 
-const PedestalLoader7 = new OBJLoader().load(PedestalPath, (obj) => {
-        obj.position.set(tempPositionX + 3,1.3,6)
-        obj.scale.setScalar(0.06)
-        obj.rotateX(Math.PI / 2 )
-    scene.add(obj)
-});
+// const PedestalLoader7 = new OBJLoader().load(PedestalPath, (obj) => {
+//         obj.position.set(tempPositionX + 3,1.3,6)
+//         obj.scale.setScalar(0.06)
+//         obj.rotateX(Math.PI / 2 )
+//     scene.add(obj)
+// });
 
-const StatueLoader7 = new FBXLoader().load("object/statue/egyptian-hieroglyph/source/Egyptian Hieroglyph.FBX", (obj) => {
-        obj.position.set(tempPositionX + 3,2.1,5.3)
-        obj.scale.setScalar(0.001)
-        // obj.rotateX(Math.PI / 2 )
-    scene.add(obj)
-});
+// const StatueLoader7 = new FBXLoader().load("object/statue/egyptian-hieroglyph/source/Egyptian Hieroglyph.FBX", (obj) => {
+//         obj.position.set(tempPositionX + 3,2.1,5.3)
+//         obj.scale.setScalar(0.001)
+//         // obj.rotateX(Math.PI / 2 )
+//     scene.add(obj)
+// });
 
 // const PedestalLoader8 = new OBJLoader().load(PedestalPath, (obj) => {
 //         obj.position.set(tempPositionX + 3,1.3,10)
@@ -1864,21 +1864,21 @@ const StatueLoader11 = new OBJLoader().load("object/statue/sphinx/source/uu-expo
 
 //-------------------------------Statue-7
 
-const PedestalLoader14 = new OBJLoader().load(PedestalPath, (obj) => {
-        obj.position.set(tempPositionX + 9,1.3,0)
-             obj.scale.setScalar(0.06)
-        obj.rotateX(Math.PI / 2 )
-    scene.add(obj)
-});
+// const PedestalLoader14 = new OBJLoader().load(PedestalPath, (obj) => {
+//         obj.position.set(tempPositionX + 9,1.3,0)
+//              obj.scale.setScalar(0.06)
+//         obj.rotateX(Math.PI / 2 )
+//     scene.add(obj)
+// });
 
 //-------------------------------Statue-8
 
-const PedestalLoader15 = new OBJLoader().load(PedestalPath, (obj) => {
-        obj.position.set(tempPositionX + 9,1.3,6)
-             obj.scale.setScalar(0.06)
-        obj.rotateX(Math.PI / 2 )
-    scene.add(obj)
-});
+// const PedestalLoader15 = new OBJLoader().load(PedestalPath, (obj) => {
+//         obj.position.set(tempPositionX + 9,1.3,6)
+//              obj.scale.setScalar(0.06)
+//         obj.rotateX(Math.PI / 2 )
+//     scene.add(obj)
+// });
 
 // const PedestalLoader16 = new OBJLoader().load(PedestalPath, (obj) => {
 //         obj.position.set(tempPositionX + 9,1.3,10)
@@ -1903,6 +1903,12 @@ const PedestalLoader18 = new OBJLoader().load(PedestalPath, (obj) => {
     scene.add(obj)
 });
 
+const StatueLoader18 = new GLTFLoader().load("object/statue/aphrodite_of_milos_a_plaster_cast/scene.gltf", (obj) => {
+    obj.scene.position.set(tempPositionX + 12.8,2.1,-0.6)
+    obj.scene.scale.setScalar(0.001)
+    scene.add(obj.scene)
+});
+
 //-------------------------------Statue-10
 
 const PedestalLoader19 = new OBJLoader().load(PedestalPath, (obj) => {
@@ -1911,6 +1917,14 @@ const PedestalLoader19 = new OBJLoader().load(PedestalPath, (obj) => {
         obj.rotateX(Math.PI / 2 )
     scene.add(obj)
 });
+
+const StatueLoader19 = new FBXLoader().load("object/statue/egyptian-hieroglyph/source/Egyptian Hieroglyph.FBX", (obj) => {
+        obj.position.set(tempPositionX + 13,2.1,5.3)
+        obj.scale.setScalar(0.001)
+        obj.rotateY(Math.PI / 2 )
+    scene.add(obj)
+});
+
 
 // const PedestalLoader20 = new OBJLoader().load(PedestalPath, (obj) => {
 //         obj.position.set(tempPositionX + 13,1.3,10)
