@@ -65,7 +65,84 @@ window.addEventListener("mouseup", function (event) {
 
 const handleControlShowPopup = (leftX : number , rightX : number  ,  leftZ : number , rightZ : number , name : string , linkURL : string ) => {
       console.log('running')
-      if (Number.isInteger(leftX) && Number.isInteger(rightX) &&  Number.isInteger(rightZ) && Number.isInteger(leftZ)){
+    //   if (Number.isInteger(leftX) || Number.isInteger(rightX) ||  Number.isInteger(rightZ) || Number.isInteger(leftZ)){
+    //      if ( Math.round(cameraPosition.x)   <= leftX && Math.round(cameraPosition.x ) <= rightX && Math.round(cameraPosition.z )  <= leftZ && Math.round(cameraPosition.z ) /100 <= rightZ  && name
+    //       ) { 
+    //          const newPanel = document.createElement("div") 
+    //           newPanel.setAttribute("id","PanelTag")
+    //           newPanel.style.display = "block"
+    //           newPanel.innerHTML =`
+    //           <div class="tag">
+    //           <div id="banner" style="color: white">${name} 
+    //           </div>
+    //           <div id="control">
+    //           <a href="${linkURL}">Tìm hiểu thêm</a>
+    //           </div>
+    //           </div>
+    //           `
+    //          document.body.appendChild(newPanel)
+             
+    //          console.log("if")
+    // } else  {
+    //     const panel = document.getElementById('PanelTag')
+    //     console.log("else")
+    //     if (panel) {
+    //         panel.remove()
+    //     }
+    // }
+    //    } else {
+    //       if ( Math.round(cameraPosition.x * 100 ) / 100  <= leftX && Math.round(cameraPosition.x * 100) /100 <= rightX && Math.round(cameraPosition.z * 100) /100 <= leftZ && Math.round(cameraPosition.z * 100) /100 <= rightZ  && name
+    //       ) { 
+    //          const newPanel = document.createElement("div") 
+    //           newPanel.setAttribute("id","PanelTag")
+    //           newPanel.style.display = "block"
+    //           newPanel.innerHTML =`
+    //           <div class="tag">
+    //           <div id="banner" style="color: white">${name} 
+    //           </div>
+    //           <div id="control">
+    //           <a href="${linkURL}">Tìm hiểu thêm</a>
+    //           </div>
+    //           </div>
+    //           `
+    //          document.body.appendChild(newPanel)
+             
+    //          console.log("if")
+    // } else  {
+    //     const panel = document.getElementById('PanelTag')
+    //     console.log("else")
+    //     if (panel) {
+    //         panel.remove()
+    //     }
+    // }}
+
+
+    //  if ( Math.round(cameraPosition.x * 100 ) / 100  <= leftX && Math.round(cameraPosition.x * 100) /100 <= rightX && Math.round(cameraPosition.z * 100) /100 <= leftZ && Math.round(cameraPosition.z * 100) /100 <= rightZ  && name
+    //       ) { 
+    //          const newPanel = document.createElement("div") 
+    //           newPanel.setAttribute("id","PanelTag")
+    //           newPanel.style.display = "block"
+    //           newPanel.innerHTML =`
+    //           <div class="tag">
+    //           <div id="banner" style="color: white">${name} 
+    //           </div>
+    //           <div id="control">
+    //           <a href="${linkURL}">Tìm hiểu thêm</a>
+    //           </div>
+    //           </div>
+    //           `
+    //          document.body.appendChild(newPanel)
+             
+    //          console.log("if")
+    // } else  {
+    //     const panel = document.getElementById('PanelTag')
+    //     console.log("else")
+    //     if (panel) {
+    //         panel.remove()
+    //     }
+    // }
+
+
          if ( Math.round(cameraPosition.x)   <= leftX && Math.round(cameraPosition.x ) <= rightX && Math.round(cameraPosition.z )  <= leftZ && Math.round(cameraPosition.z ) /100 <= rightZ  && name
           ) { 
              const newPanel = document.createElement("div") 
@@ -90,31 +167,6 @@ const handleControlShowPopup = (leftX : number , rightX : number  ,  leftZ : num
             panel.remove()
         }
     }
-       } else {
-          if ( Math.round(cameraPosition.x * 100 ) / 100  <= leftX && Math.round(cameraPosition.x * 100) /100 <= rightX && Math.round(cameraPosition.z * 100) /100 <= leftZ && Math.round(cameraPosition.z * 100) /100 <= rightZ  && name
-          ) { 
-             const newPanel = document.createElement("div") 
-              newPanel.setAttribute("id","PanelTag")
-              newPanel.style.display = "block"
-              newPanel.innerHTML =`
-              <div class="tag">
-              <div id="banner" style="color: white">${name} 
-              </div>
-              <div id="control">
-              <a href="${linkURL}">Tìm hiểu thêm</a>
-              </div>
-              </div>
-              `
-             document.body.appendChild(newPanel)
-             
-             console.log("if")
-    } else  {
-        const panel = document.getElementById('PanelTag')
-        console.log("else")
-        if (panel) {
-            panel.remove()
-        }
-    }}
 }
 
 
@@ -701,20 +753,25 @@ window.addEventListener("keydown",  function (event) {
      console.log(Math.round(cameraPosition.x * 100 ) / 100 +"," + Math.round(cameraPosition.y * 100) / 100 +"," +  Math.round(cameraPosition.z * 100) / 100);
     // room1 
     switch (Math.round(cameraPosition.x) && Math.round(cameraPosition.z)) {
-        case 21   && (12 || 11) : 
-             handleControlShowPopup(21, 21, 12, 11 , "Bản đồ sông Euphrates & sông Tigris" , "" )
+        case (21 || 20)   && (12 || 11) : 
+             handleControlShowPopup(21.9, 21, 12, 12 , "Bản đồ sông Euphrates & sông Tigris" , "" )
+             console.log("hey1")
              break
-        case (19 || 18) &&(15 || 14) :
-             handleControlShowPopup(19, 18, 15 , 14 , "Sông Nin" , "" ) 
+        case (19 || 18) && (15 || 14) :
+             handleControlShowPopup(19.95, 19, 15.10 , 14.49 , "Sông Nin" , "" ) 
+                          console.log("hey2")
              break
-        case 18 && 18 :
-             handleControlShowPopup(18, 18 , 18, 18 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   
+        case (19 || 18) && 18 :
+             handleControlShowPopup(19.61, 18.86 , 18, 18 , "Sông Euphrates ở gần Ar Raqqah, Syria" , "" )   
+                          console.log("hey3")
              break
-        case 19 && (21 || 20) :
-            handleControlShowPopup(19, 19, 21, 20 , "Sông Tigris ở Mosul, Iraq" , "" )
+        case 19 && 21  :
+            handleControlShowPopup(19, 19, 21.9, 21 , "Sông Tigris ở Mosul, Iraq" , "" )
+                         console.log("hey4")
             break
-        case (17 || 16) && (20 || 19) :
-            handleControlShowPopup(17, 16, 20, 19, "Các vị thầns Geb và Nut" , "" )
+        case (18 || 17) && 20  :
+            handleControlShowPopup(18, 17, 20, 20, "Các vị thầns Geb và Nut" , "" )
+                         console.log("hey5")
             break
         case (16 || 15) && (10 || 9) :
             handleControlShowPopup(16, 15, 10, 9, "Số học" , "" )
