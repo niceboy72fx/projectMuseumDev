@@ -722,87 +722,96 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(1, 1, 20, 20, "Triết học", "" )
             break
         case ( Math.round(cameraPosition.x) == -2    && Math.round(cameraPosition.z) == 16 ) :
-            handleControlShowPopup(-2, -2, 16, 16, "Pháo đài đỏ Lal Quila", "") // 
+            handleControlShowPopup(-2, -2, 16, 16, "Pháo đài đỏ Lal Quila", "")
             break
-        // case (-5 || -6) && 16 :
-        //     handleControlShowPopup(-5, -6, 16, 16, "Thành phố Ha-ráp-pa", "")
-        //     break
-        // case -6 && (13 || 12) :
-        //     handleControlShowPopup(-6, -6, 13, 12, "Lăng Ta-giơ Ma-tan", "")
-        //     break
-        // case -3 && 10 :
-        //     handleControlShowPopup(-3, -3, 10, 10, "Toán học", "") // Lỗi 
-        //     break
-        // case (2 || 1) && 10 :
-        //     handleControlShowPopup(2, 1, 10, 10, "Tháp Mina - Công trình kiến trúc Hồi giáo nổi bật", "") // Lỗi
-        //     break
-        // // Room 2 (lỗi 7)
-        // // Room 3
-        // case -6 && -7 :
-        //     handleControlShowPopup(-6, -6, -7, -7, "In ấn", "")
-        //     break
-        // case -3 && -10 :
-        //     handleControlShowPopup(-3, -3, -10, -10, "La bàn", "")
-        //     break
-        // case -3 && (-12 || -13) :
-        //     handleControlShowPopup(-3, -3, -12, -13, "Đồng hồ cơ khí", "")
-        //     break
-        // case -3 && -15 :
-        //     handleControlShowPopup(-3, -3, -15, -15, "Kinh thi", "")
-        //     break
-        // case -1 && -16 :
-        //     handleControlShowPopup(-1, -1, -16, -16, "Giấy", "")
-        //     break
-        // case 0 && -15 :
-        //     handleControlShowPopup(0, 0, -15, -15, "Chữ viết trên thẻ tre", "") // Lỗi
-        //     break
-        // case 3 && -11 :
-        //     handleControlShowPopup(3, 3, -11, -11, "Bảy nhà tư tưởng vĩ đại nhất Trung Quốc (Thời kỳ cổ đại)", "")
-        //     break
-        // case 6 && -12 :
-        //     handleControlShowPopup(6, 6, -12, -12, "Vạn lý trường thành", "") // Lỗi
-        //     break
-        // case 7 && -11 :
-        //     handleControlShowPopup(7, 7, -11, -11, "Cửu chương lập thành toán pháp", "") // Lỗi
-        //     break
-        // // Room 3 (lỗi 3)
-        // // Room 4
-        // case 9 && -7 :
-        //     handleControlShowPopup(9, 9, -7, -7, "Lược đồ Hy Lạp cổ đại", "") // Lỗi
-        //     break
-        // case 12 && (-10 || -11) :
-        //     handleControlShowPopup(12, 12, -10, -11, "Bản đồ La Mã (từ thế kỷ V TCN đến thế kỷ 2)", "") // Lỗi
-        //     break
-        // case 12 && -13 :
-        //     handleControlShowPopup(12, 12, -13, -13, "Sử thi Iliad", "")
-        //     break
-        // case 12 && -15 :
-        //     handleControlShowPopup(12, 12, -15, -15, "Một cảnh trong tác phẩm Eudipe", "") // Lỗi
-        //     break
-        // case 14 && -16 :
-        //     handleControlShowPopup(14, 14, -16, -16, "Cảnh quan Firenze, trung tâm bắt nguồn Phục Hưng", "") // Lỗi
-        //     break
-        // case 15 && -15 :
-        //     handleControlShowPopup(15, 15, -15, -15, "Viện nguyên lão", "") // Lỗi 
-        //     break
-        // case 18 && -11 :
-        //     handleControlShowPopup(18, 18, -11, -11, "Thành Roma", "") // Lỗi
-        //     break
-        // case 21 && -12 :
-        //     handleControlShowPopup(21, 21, -12, -12, "Bức tượng hoàng đế Elagabalus", "") //Lỗi 
-        //     break
-        // case 22 && -11 :
-        //     handleControlShowPopup(22, 22, -11, -11, "Đấu trường Roma", "") // Lỗi
-        //     break
-        // case 22 && -6 :
-        //     handleControlShowPopup(22, 22, -6, -6, "Triết học Hy Lạp", "")
-        //     break
-        // case 20 && -4 :
-        //     handleControlShowPopup(20, 20, -4, -4, "Thành phố Florence, Italy", "")
-        //     break
-        // case 16 && -5 :
-        //     handleControlShowPopup(16, 16, -5, -5, "Hình ảnh một đấu sỹ đấu lợn rừng", "")
-        //     break
+        case ( Math.round(cameraPosition.x ) == -5 && Math.round(cameraPosition.z) ==  16) :
+             handleControlShowPopup(-5, -5, 16, 16, "Thành phố Ha-ráp-pa", "")
+             break
+        case ( Math.round(cameraPosition.x ) == -6 && Math.round(cameraPosition.z) ==  13) :
+             handleControlShowPopup(-6, -6, 13, 13, "Lăng Ta-giơ Ma-tan", "")
+             break
+        case ( Math.round(cameraPosition.x ) == -3 && Math.round(cameraPosition.z) ==  10) :
+             handleControlShowPopup(-3, -3, 10, 10, "Toán học", "")
+             break
+        case ( Math.round(cameraPosition.x ) == 2 &&  Math.round(cameraPosition.z) == 10 ):
+             handleControlShowPopup(2, 2, 10, 10, "Tháp Mina - Công trình kiến trúc Hồi giáo nổi bật", "") // Lỗi
+             break
+        // Room 2 
+         // Room 3
+        case  ( Math.round(cameraPosition.x) == -6 && Math.round(cameraPosition.z) == -7) :
+             handleControlShowPopup(-6, -6, -7, -7, "In ấn", "")
+             break
+         case ( Math.round(cameraPosition.x) == -3 && Math.round(cameraPosition.z) == -10) :
+             handleControlShowPopup(-3, -3, -10, -10, "La bàn", "")
+             break
+         case ( Math.round(cameraPosition.x) == -3 && Math.round(cameraPosition.z) == -12 ) :
+             handleControlShowPopup(-3, -3, -12, -12, "Đồng hồ cơ khí", "")
+             break
+         case ( Math.round(cameraPosition.x) == -3 && Math.round(cameraPosition.z) == -15 ) :
+             handleControlShowPopup(-3, -3, -15, -15, "Kinh thi", "")
+             break
+         case ( Math.round(cameraPosition.x) == -1 && Math.round(cameraPosition.z) == -16 ) :
+             handleControlShowPopup(-1, -1, -16, -16, "Giấy", "")
+             break
+         case ( Math.round(cameraPosition.x) == 0 &&  Math.round(cameraPosition.z) ==-15 ) :
+             handleControlShowPopup(0, 0, -15, -15, "Chữ viết trên thẻ tre", "")
+             break
+         case ( Math.round(cameraPosition.x) == 3 &&  Math.round(cameraPosition.z) ==-11 ):
+             handleControlShowPopup(3, 3, -11, -11, "Bảy nhà tư tưởng vĩ đại nhất Trung Quốc (Thời kỳ cổ đại)", "")
+             break
+         case ( Math.round(cameraPosition.x) == 6 &&  Math.round(cameraPosition.z) ==-12 ):
+             handleControlShowPopup(6, 6, -12, -12, "Vạn lý trường thành", "")
+             break
+         case ( Math.round(cameraPosition.x) == 7 &&  Math.round(cameraPosition.z) ==-11 ):
+             handleControlShowPopup(7, 7, -11, -11, "Cửu chương lập thành toán pháp", "")
+             break
+        case ( Math.round(cameraPosition.x) == 7 &&  Math.round(cameraPosition.z) ==-6 ):
+            handleControlShowPopup(7, 7, -6, -6, "Hàn Phi Tử", "")
+            break
+        case ( Math.round(cameraPosition.x) == 5 &&  Math.round(cameraPosition.z) ==-4 ):
+            handleControlShowPopup(5, 5, -4, -4, "Lão Tử", "")
+            break
+        case ( Math.round(cameraPosition.x) == 1 &&  Math.round(cameraPosition.z) ==-4 ):
+            handleControlShowPopup(1, 1, -4, -4, "Khổng Tử", "")
+            break
+         // Room 3
+        // Room 4
+        case ( Math.round(cameraPosition.x)==  9 && Math.round(cameraPosition.z) == -7 ) :
+            handleControlShowPopup(9, 9, -7, -7, "Lược đồ Hy Lạp cổ đại", "") // Lỗi
+            break
+        case ( Math.round(cameraPosition.x) == 12 && Math.round(cameraPosition.z) == -10)  :
+            handleControlShowPopup(12, 12, -10, -10, "Bản đồ La Mã (từ thế kỷ V TCN đến thế kỷ 2)", "") // Lỗi
+            break
+        case ( Math.round(cameraPosition.x) == 12 && Math.round(cameraPosition.z) == -13)  :
+            handleControlShowPopup(12, 12, -13, -13, "Sử thi Iliad", "")
+            break
+        case ( Math.round(cameraPosition.x) == 12 && Math.round(cameraPosition.z) == -15)  :
+            handleControlShowPopup(12, 12, -15, -15, "Một cảnh trong tác phẩm Eudipe", "") // Lỗi
+            break
+        case ( Math.round(cameraPosition.x) == 14 && Math.round(cameraPosition.z) == -16)  :
+            handleControlShowPopup(14, 14, -16, -16, "Cảnh quan Firenze, trung tâm bắt nguồn Phục Hưng", "") // Lỗi
+            break
+        case ( Math.round(cameraPosition.x) == 15 && Math.round(cameraPosition.z) == -15)  :
+            handleControlShowPopup(15, 15, -15, -15, "Viện nguyên lão", "") // Lỗi 
+            break
+        case ( Math.round(cameraPosition.x) == 18 && Math.round(cameraPosition.z) == -11)  :
+            handleControlShowPopup(18, 18, -11, -11, "Thành Roma", "") // Lỗi
+            break
+        case ( Math.round(cameraPosition.x) == 21 && Math.round(cameraPosition.z) == -12)  :
+            handleControlShowPopup(21, 21, -12, -12, "Bức tượng hoàng đế Elagabalus", "") //Lỗi 
+            break
+        case ( Math.round(cameraPosition.x) == 22 && Math.round(cameraPosition.z) == -11)  :
+            handleControlShowPopup(22, 22, -11, -11, "Đấu trường Roma", "") // Lỗi
+            break
+        case ( Math.round(cameraPosition.x) == 22 && Math.round(cameraPosition.z) == -6 ) :
+            handleControlShowPopup(22, 22, -6, -6, "Triết học Hy Lạp", "")
+            break
+        case ( Math.round(cameraPosition.x) == 20 && Math.round(cameraPosition.z) == -4 ) :
+            handleControlShowPopup(20, 20, -4, -4, "Thành phố Florence, Italy", "")
+            break
+        case ( Math.round(cameraPosition.x) == 16 && Math.round(cameraPosition.z) == -5 ) :
+            handleControlShowPopup(16, 16, -5, -5, "Hình ảnh một đấu sỹ đấu lợn rừng", "")
+            break
         // Room 4 (lỗi 8)
         default:
         if (panel) {
