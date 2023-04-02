@@ -64,7 +64,7 @@ const handleControlShowPopup = (leftX : number , rightX : number  ,  leftZ : num
               <div id="banner" style="color: white">${name} 
               </div>
               <div id="control">
-              <a href="${linkURL}">Tìm hiểu thêm</a>
+              <a style="color: white" href="${linkURL}">Tìm hiểu thêm</a>
               </div>
               </div>
               `
@@ -664,6 +664,10 @@ window.addEventListener("keydown",  function (event) {
      console.log(Math.round(cameraPosition.x) +"," + Math.round(cameraPosition.y) +"," +  Math.round(cameraPosition.z ) );
     // room1 
     switch (true) {
+            
+         case ( Math.round(cameraPosition.x) == 21    && Math.round(cameraPosition.z) == 7 ) : 
+             handleControlShowPopup(21, 21, 7, 7 , "Hoạt động khởi động" , "https://www.thinglink.com/scene/1696629430526411556" )
+             break
         case ( Math.round(cameraPosition.x) == 21    && Math.round(cameraPosition.z) == 12 ) : 
              handleControlShowPopup(21, 21, 12, 12 , "Bản đồ sông Euphrates & sông Tigris" , "" )
              console.log("hey1")
@@ -681,28 +685,31 @@ window.addEventListener("keydown",  function (event) {
                          console.log("hey4")
             break
         case  ( Math.round(cameraPosition.x) == 17    && Math.round(cameraPosition.z) == 20 ) :
-            handleControlShowPopup(17, 17, 20, 20, "Các vị thầns Geb và Nut" , "" )
+            handleControlShowPopup(17, 17, 20, 20, "Các vị thầns Geb và Nut" , "https://www.thinglink.com/scene/1696111604162102243" )
                          console.log("hey5")
             break
         case ( Math.round(cameraPosition.x) == 16    && Math.round(cameraPosition.z) == 10 ) :
             handleControlShowPopup(16, 16, 10, 10, "Số học" , "" )
             break
         case  ( Math.round(cameraPosition.x) == 11    && Math.round(cameraPosition.z) == 9 ):
-            handleControlShowPopup(11, 11, 9,9, "Chữ tượng hình của Ai Cập cổ đại", "" ) 
+            handleControlShowPopup(11, 11, 9,9, "Chữ tượng hình của Ai Cập cổ đại", "https://www.thinglink.com/scene/1696111604162102243" ) 
             break
         case ( Math.round(cameraPosition.x) == 9    && Math.round(cameraPosition.z) == 11 ) : 
             handleControlShowPopup(9, 9, 11, 11, "Điều kiện tự nhiên", "" )
             break
         case ( Math.round(cameraPosition.x) == 9    && Math.round(cameraPosition.z) == 15 ) :
-            handleControlShowPopup(9, 9, 15, 15, "Việc đo đạc của người Ai Cập", "" ) // err
+            handleControlShowPopup(9, 9, 15, 15, "Việc đo đạc của người Ai Cập", "https://www.thinglink.com/scene/1696111604162102243" ) // err
             break
         case ( Math.round(cameraPosition.x) == 10    && Math.round(cameraPosition.z) == 17 ) : 
             handleControlShowPopup(10, 10, 17, 17, "Thành tựu khoa học của người Ai Cập", "" )
             break
         case ( Math.round(cameraPosition.x) == 12    && Math.round(cameraPosition.z) == 16 ) :
-            handleControlShowPopup(12, 12, 16, 16, "Tượng Xpanh (Nhân sư)", "" ) 
+            handleControlShowPopup(12, 12, 16, 16, "Tượng Xpanh (Nhân sư)", "https://www.thinglink.com/scene/1696111604162102243" ) 
             break
         // Room 2
+        case  ( Math.round(cameraPosition.x) == 6 && Math.round(cameraPosition.z) == 7) :
+             handleControlShowPopup(6, 6, 7, 7, "Hoạt động hình thành kiến thức", "https://www.proprofsflashcards.com/ugc/story.php?title=ch--mt-s-nn-vn-minh-th-gii-thi-c-trung-i")
+             break
         case ( Math.round(cameraPosition.x) == 7    && Math.round(cameraPosition.z) == 12 )  :
             handleControlShowPopup(7, 7, 12, 12, "Lược đồ Ấn Độ cổ đại", "" ) 
             break
@@ -710,7 +717,7 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(4, 4, 14, 14, "Chữ San-krít trên lá cọ", "" ) 
             break
         case ( Math.round(cameraPosition.x) == 4    && Math.round(cameraPosition.z) == 18 ) :
-            handleControlShowPopup(4, 4, 18, 18, "Đạo Bà La Môn", "" ) 
+            handleControlShowPopup(4, 4, 18, 18, "Đạo Bà La Môn", "https://www.thinglink.com/scene/1696129789615670243" ) 
             break
         case ( Math.round(cameraPosition.x) == 4    && Math.round(cameraPosition.z) == 21 ) :
             handleControlShowPopup(4, 4, 21, 21, "Văn học, nghệ thuật Ấn Độ cổ đại", "" )
@@ -719,13 +726,13 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(2, 2, 20, 20, "Y dược học Ấn Độ cổ đại", "" ) 
             break
         case ( Math.round(cameraPosition.x) == 1    && Math.round(cameraPosition.z) == 20 ) :
-            handleControlShowPopup(1, 1, 20, 20, "Triết học", "" )
+            handleControlShowPopup(1, 1, 20, 20, "Triết học", "https://www.thinglink.com/scene/1696129789615670243" )
             break
         case ( Math.round(cameraPosition.x) == -2    && Math.round(cameraPosition.z) == 16 ) :
             handleControlShowPopup(-2, -2, 16, 16, "Pháo đài đỏ Lal Quila", "")
             break
         case ( Math.round(cameraPosition.x ) == -5 && Math.round(cameraPosition.z) ==  16) :
-             handleControlShowPopup(-5, -5, 16, 16, "Thành phố Ha-ráp-pa", "")
+             handleControlShowPopup(-5, -5, 16, 16, "Thành phố Ha-ráp-pa", "https://www.thinglink.com/scene/1696129789615670243")
              break
         case ( Math.round(cameraPosition.x ) == -6 && Math.round(cameraPosition.z) ==  13) :
              handleControlShowPopup(-6, -6, 13, 13, "Lăng Ta-giơ Ma-tan", "")
@@ -738,17 +745,20 @@ window.addEventListener("keydown",  function (event) {
              break
         // Room 2 
          // Room 3
+           case  ( Math.round(cameraPosition.x) == -6 && Math.round(cameraPosition.z) == -2) :
+             handleControlShowPopup(-6, -6, -2, -2, "Hoạt động hình thành kiến thức ", "https://www.proprofsflashcards.com/ugc/story.php?title=ch--mt-s-nn-vn-minh-th-gii-thi-c-trung-i")
+             break
         case  ( Math.round(cameraPosition.x) == -6 && Math.round(cameraPosition.z) == -7) :
              handleControlShowPopup(-6, -6, -7, -7, "In ấn", "")
              break
          case ( Math.round(cameraPosition.x) == -3 && Math.round(cameraPosition.z) == -10) :
-             handleControlShowPopup(-3, -3, -10, -10, "La bàn", "")
+             handleControlShowPopup(-3, -3, -10, -10, "La bàn", "https://www.thinglink.com/scene/1696595642014499620")
              break
          case ( Math.round(cameraPosition.x) == -3 && Math.round(cameraPosition.z) == -12 ) :
              handleControlShowPopup(-3, -3, -12, -12, "Đồng hồ cơ khí", "")
              break
          case ( Math.round(cameraPosition.x) == -3 && Math.round(cameraPosition.z) == -15 ) :
-             handleControlShowPopup(-3, -3, -15, -15, "Kinh thi", "")
+             handleControlShowPopup(-3, -3, -15, -15, "Kinh thi", "https://www.thinglink.com/scene/1696595642014499620")
              break
          case ( Math.round(cameraPosition.x) == -1 && Math.round(cameraPosition.z) == -16 ) :
              handleControlShowPopup(-1, -1, -16, -16, "Giấy", "")
@@ -757,10 +767,10 @@ window.addEventListener("keydown",  function (event) {
              handleControlShowPopup(0, 0, -15, -15, "Chữ viết trên thẻ tre", "")
              break
          case ( Math.round(cameraPosition.x) == 3 &&  Math.round(cameraPosition.z) ==-11 ):
-             handleControlShowPopup(3, 3, -11, -11, "Bảy nhà tư tưởng vĩ đại nhất Trung Quốc (Thời kỳ cổ đại)", "")
+             handleControlShowPopup(3, 3, -11, -11, "Bảy nhà tư tưởng vĩ đại nhất Trung Quốc (Thời kỳ cổ đại)", "https://www.thinglink.com/scene/1696595642014499620")
              break
          case ( Math.round(cameraPosition.x) == 6 &&  Math.round(cameraPosition.z) ==-12 ):
-             handleControlShowPopup(6, 6, -12, -12, "Vạn lý trường thành", "")
+             handleControlShowPopup(6, 6, -12, -12, "Vạn lý trường thành", "https://www.thinglink.com/scene/1696595642014499620")
              break
          case ( Math.round(cameraPosition.x) == 7 &&  Math.round(cameraPosition.z) ==-11 ):
              handleControlShowPopup(7, 7, -11, -11, "Cửu chương lập thành toán pháp", "")
@@ -774,8 +784,10 @@ window.addEventListener("keydown",  function (event) {
         case ( Math.round(cameraPosition.x) == 1 &&  Math.round(cameraPosition.z) ==-4 ):
             handleControlShowPopup(1, 1, -4, -4, "Khổng Tử", "")
             break
-         // Room 3
         // Room 4
+        case ( Math.round(cameraPosition.x)==  10 && Math.round(cameraPosition.z) == -2 ) :
+            handleControlShowPopup(10, 10, -2, -2, "Hoạt động khởi động", "https://www.proprofsgames.com/ugc/jigsaw/pieces-of-history/") // Lỗi
+            break
         case ( Math.round(cameraPosition.x)==  9 && Math.round(cameraPosition.z) == -7 ) :
             handleControlShowPopup(9, 9, -7, -7, "Lược đồ Hy Lạp cổ đại", "") // Lỗi
             break
@@ -789,10 +801,10 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(12, 12, -15, -15, "Một cảnh trong tác phẩm Eudipe", "") // Lỗi
             break
         case ( Math.round(cameraPosition.x) == 14 && Math.round(cameraPosition.z) == -16)  :
-            handleControlShowPopup(14, 14, -16, -16, "Cảnh quan Firenze, trung tâm bắt nguồn Phục Hưng", "") // Lỗi
+            handleControlShowPopup(14, 14, -16, -16, "Cảnh quan Firenze, trung tâm bắt nguồn Phục Hưng", "https://www.thinglink.com/scene/1696595642014499620") // Lỗi
             break
         case ( Math.round(cameraPosition.x) == 15 && Math.round(cameraPosition.z) == -15)  :
-            handleControlShowPopup(15, 15, -15, -15, "Viện nguyên lão", "") // Lỗi 
+            handleControlShowPopup(15, 15, -15, -15, "Viện nguyên lão", "https://www.thinglink.com/scene/1696595642014499620") // Lỗi 
             break
         case ( Math.round(cameraPosition.x) == 18 && Math.round(cameraPosition.z) == -11)  :
             handleControlShowPopup(18, 18, -11, -11, "Thành Roma", "") // Lỗi
@@ -801,16 +813,20 @@ window.addEventListener("keydown",  function (event) {
             handleControlShowPopup(21, 21, -12, -12, "Bức tượng hoàng đế Elagabalus", "") //Lỗi 
             break
         case ( Math.round(cameraPosition.x) == 22 && Math.round(cameraPosition.z) == -11)  :
-            handleControlShowPopup(22, 22, -11, -11, "Đấu trường Roma", "") // Lỗi
+            handleControlShowPopup(22, 22, -11, -11, "Đấu trường Roma", "https://www.thinglink.com/scene/1696595642014499620") // Lỗi
             break
         case ( Math.round(cameraPosition.x) == 22 && Math.round(cameraPosition.z) == -6 ) :
             handleControlShowPopup(22, 22, -6, -6, "Triết học Hy Lạp", "")
             break
         case ( Math.round(cameraPosition.x) == 20 && Math.round(cameraPosition.z) == -4 ) :
-            handleControlShowPopup(20, 20, -4, -4, "Thành phố Florence, Italy", "")
+            handleControlShowPopup(20, 20, -4, -4, "Thành phố Florence, Italy", "https://www.thinglink.com/scene/1696595642014499620")
             break
         case ( Math.round(cameraPosition.x) == 16 && Math.round(cameraPosition.z) == -5 ) :
             handleControlShowPopup(16, 16, -5, -5, "Hình ảnh một đấu sỹ đấu lợn rừng", "")
+            break
+        // lobby 
+        case ( Math.round(cameraPosition.x) == 51 && Math.round(cameraPosition.z) == 2 ) :
+            handleControlShowPopup(51, 51, 2, 2, "Luyện tập , mở rộng", "https://docs.google.com/forms/d/e/1FAIpQLSd5MUpy8snTsQGwEsC2ZZiAQgfdbsUsFtZvjzh3hvFhOGZphw/viewform?usp=send_form")
             break
         // Room 4 (lỗi 8)
         default:
@@ -1984,7 +2000,7 @@ const onKeyDown = function (event: KeyboardEvent) {
             break
         case 'Enter':
             menuPanel.style.display = 'none'
-            controls.lock()
+            controls.unlock()
             break
     }
 }
